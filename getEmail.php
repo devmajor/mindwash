@@ -9,7 +9,7 @@ $from = "MindWash Inc.";
 $subject = "MindWash Coming Soon!";
 $body = "Thank you for subscribing, You will be notified when our app is launched"; 
 
-
+$fromName = 'MindWash Inc.';
 
 //header for sender info
 $headers = "From: $fromName"." <".$from.">";
