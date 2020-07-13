@@ -3,7 +3,7 @@
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
     
-if(isset($_POST['submit'])){
+if(isset($_POST['submit_mail'])){
 
 $email = $_POST['email'];
 
@@ -37,7 +37,7 @@ if (mail($to, $subject, $message, $headers)) {
 <body>
 	<form action="" method="GET">
 		<input type="text" name="email">
-		<button type="submit" name="submit">Submit</button>
+		<button type="submit" name="submit_mail">Submit</button>
 	</form>
 	
 </body>
