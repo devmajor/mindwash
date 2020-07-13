@@ -1,10 +1,10 @@
 <?php
 
-if(isset($_POST['submit'])){
-	$email = $_POST['email'];
+if(isset($_POST["submit"])){
+	// $email = $_POST['email'];
 
 
-echo $to = $email;
+echo $to = $_POST["email"];
 $from = "victorabayomi@gmail.com";
 $subject = "MindWash Coming Soon!";
 $message = "Thank you for subscribing, You will be notified when our app is launched"; 
