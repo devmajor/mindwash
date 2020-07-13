@@ -3,7 +3,7 @@
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
     
-if(isset($_GET['submit_mail'])){
+if(isset($_GET['email'])){
 
 $email = $_GET['email'];
 
