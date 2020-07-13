@@ -37,7 +37,7 @@ if (mail($to, $subject, $message, $headers)) {
 <body>
 	<form action="" method="GET">
 		<input type="text" name="email">
-		<button name="submit">Submit</button>
+		<button type="submit" name="submit">Submit</button>
 	</form>
 	
 </body>
