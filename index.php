@@ -3,8 +3,9 @@
 ini_set( 'display_errors', 1 );
 error_reporting( E_ALL );
     
+if(isset($_GET['submit_mail'])){
 
-$email = $_POST['email'];
+$email = $_GET['email'];
 
 $to      = $email;
 $subject = 'the subject';
@@ -22,6 +23,9 @@ if (mail($to, $subject, $message, $headers)) {
 }
 
 
+}else{
+	echo "NO DATA";
+}
 
 ?>
 
@@ -33,7 +37,7 @@ if (mail($to, $subject, $message, $headers)) {
 <body>
 	<form action="" method="GET">
 		<input type="text" name="email">
-		<button type="submit" name="submit_mail">Submit</button>
+		<button type="submit" name="submit">Submit</button>
 	</form>
 	
 </body>
