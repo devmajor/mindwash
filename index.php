@@ -7,7 +7,7 @@ if(isset($_GET['submit_mail'])){
 
 $email = $_GET['email'];
 
-$to      = $email;
+echo $to      = $email;
 $subject = 'the subject';
 $message = 'hello';
 $headers = 'From: victorabayomi@gmail.com' . "\r\n" .
