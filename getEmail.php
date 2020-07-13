@@ -32,7 +32,11 @@ $returnpath = "-f" . $from;
 //send email
 $mail = @mail($to, $subject, $message, $headers, $returnpath); 
 
-
+if($mail){
+	echo "EMAIL SENT !";
+}else{
+	echo "ERROR SENDING EMAIL";
+}
 
 
 // $separator = md5(time());
