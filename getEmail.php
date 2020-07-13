@@ -7,36 +7,21 @@ if(isset($_POST['submit'])){
 echo $to = $email;
 $from = "victorabayomi@gmail.com";
 $subject = "MindWash Coming Soon!";
-$body = "Thank you for subscribing, You will be notified when our app is launched"; 
+$message = "Thank you for subscribing, You will be notified when our app is launched"; 
+       
+         $header = "From:victorabayomi@gmail.com \r\n";
+         // $header .= "Cc:afgh@somedomain.com \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
+         
+         $retval = mail ($to,$subject,$message,$header);
+         
+         if( $retval == true ) {
+            echo "Message sent successfully...";
+         }else {
+            echo "Message could not be sent...";
+         }
 
-$fromName = 'MindWash Inc.';
-
-//header for sender info
-$headers = "From: $fromName"." <".$from.">";
-
-//boundary 
-$semi_rand = md5(time()); 
-$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x"; 
-
-//headers for attachment 
-$headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\""; 
-
-//multipart boundary 
-$message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
-"Content-Transfer-Encoding: 7bit\n\n" . $body . "\n\n"; 
-
-
-$message .= "--{$mime_boundary}--";
-$returnpath = "-f" . $from;
-
-//send email
-$mail = mail($to, $subject, $message); 
-
-if($mail){
-	echo "EMAIL SENT !";
-}else{
-	echo "ERROR SENDING EMAIL";
-}
 
 
 // $separator = md5(time());
