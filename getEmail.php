@@ -4,8 +4,8 @@ if(isset($_POST['submit'])){
 	$email = $_POST['email'];
 
 
-$to = $email;
-$from = "MindWash Inc.";
+echo $to = $email;
+$from = "victorabayomi@gmail.com";
 $subject = "MindWash Coming Soon!";
 $body = "Thank you for subscribing, You will be notified when our app is launched"; 
 
