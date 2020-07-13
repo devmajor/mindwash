@@ -84,6 +84,8 @@ if($mail){
 
 // "-f crudanhq@crudan.org"
 
+}else{
+	echo "NO DATA RECEIVED";
 }
 
 
