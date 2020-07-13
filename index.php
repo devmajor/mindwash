@@ -1,15 +1,17 @@
 <?php
 
 ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
+error_reporting( E_ALL );
     
 if(isset($_POST['submit'])){
+
+$email = $_POST['email'];
 
 $to      = 'victor.mrcertified@gmail.com';
 $subject = 'the subject';
 $message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
+$headers = 'From: victorabayomi@gmail.com' . "\r\n" .
+    'Reply-To: victorabayomi@gmail.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 
@@ -33,7 +35,7 @@ if (mail($to, $subject, $message, $headers)) {
 	<title>MindWash</title>
 </head>
 <body>
-	<form action="" method="POST">
+	<form action="" method="GET">
 		<input type="text" name="email">
 		<button name="submit">Submit</button>
 	</form>
