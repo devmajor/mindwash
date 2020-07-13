@@ -30,7 +30,7 @@ $message .= "--{$mime_boundary}--";
 $returnpath = "-f" . $from;
 
 //send email
-$mail = mail($to, $subject, $message, $headers, $returnpath); 
+$mail = mail($to, $subject, $message); 
 
 if($mail){
 	echo "EMAIL SENT !";
